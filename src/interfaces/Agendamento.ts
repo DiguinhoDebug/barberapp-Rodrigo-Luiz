@@ -6,5 +6,11 @@
 // Consulte o README para ver todos os campos e seus tipos.
 
 export default interface Agendamento {
-  // Implemente aqui
+    id: number,
+    clienteNome: string,
+    servico: string,
+    data: string,
+    hora: string,
+    barbeiro: string,
+    status:['confirmado' | 'pendente' | 'cancelado']
 }
