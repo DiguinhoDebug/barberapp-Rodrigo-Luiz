@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <h2 class="mb-4">📅 Agendamentos do Dia</h2>
-    <RouterLink to="/cadastro">Cadastrar agendamento</RouterLink>
+    <Button class="btn-primary">
+      <RouterLink to="/cadastro">Cadastrar agendamento</RouterLink>
+    </Button>
 
     <!-- TODO
         Criar um router link para ir para tela de cadastro
@@ -15,7 +17,7 @@
       https://vuejs.org/guide/essentials/list.html#v-for
       https://vuejs.org/guide/essentials/list.html#maintaining-state-with-key
     -->
-    <div v-for="agendamento in agendamentos">
+    <div v-for="agendamento in a">
       <AgendamentoCard Agendamento={agendamento} />
     </div>
   </div>
@@ -29,7 +31,7 @@ import { listarAgendamentos, criarAgendamento } from '../services/agendamentoSer
 
 // TODO [CRITÉRIO 3]:
 // Crie uma variável reativa (ref) para armazenar a lista de agendamentos.
-const listaAgendamentos = ref();
+const listaAgendamentos = ref([]);
 
 
 // TODO [CRITÉRIO 3 e 8]:

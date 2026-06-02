@@ -13,6 +13,9 @@ const http = axios.create({
 // Ela deve fazer uma requisição GET à API (/agendamentos) e retornar a lista de agendamentos.
 export async function listarAgendamentos() {
   // Implemente aqui
+  http.get("/agendamentos")
+  
+
 }
 
 // TODO [CRITÉRIO 9]:

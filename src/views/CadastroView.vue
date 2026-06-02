@@ -1,16 +1,23 @@
 <template>
-    <!-- TODO [CRITÉRIO 11 e 12]:
-      Monte o formulário de cadastro com os campos:
-        - clienteNome (text)
-        - servico (text)
-        - data (date)
-        - hora (time)
-        - barbeiro (text)
-      Use v-model em cada campo para fazer o binding com os dados reativos.
-      O botão de envio deve chamar a função "cadastrarAgendamento"
-      https://getbootstrap.com/docs/5.3/forms/overview/#overview
-      https://vuejs.org/guide/essentials/forms.html#basic-usage
-    -->
+  <form>
+    <div class="mb-3">
+      <label for="nomeCliente" class="form-label">Nome do cliente</label>
+      <input type="text" class="form-control" id="nomeCliente">
+    </div>
+    <div class="mb-3">
+      <label for="servico" class="form-label">Serviço</label>
+      <input type="text" class="form-control" id="servico">
+    </div>
+    <div class="mb-3">
+      <label for="hora" class="form-label">Horário</label>
+      <input type="time" class="form-control" id="hora">
+    </div>
+    <div class="mb-3">
+      <label for="barbeiro" class="form-label">Barbeiro</label>
+      <input type="text" class="form-control" id="barbeiro">
+    </div>
+    <button type="submit" class="btn btn-primary" @submit="cadastrarAgendamento">Enviar</button>
+  </form>
 </template>
 
 <script setup lang="ts">

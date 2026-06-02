@@ -12,17 +12,16 @@
   -->
   <div class="card text-center">
     <div class="card-header">
-      {{ Agendamento.clienteNome }}
+      {{ agendamento.clienteNome }}
     </div>
     <div class="card-body">
-      <h5 class="card-title">{{ Agendamento.servico }}</h5>
-      <p class="card-text">{{ Agendamento.hora }}</p>
-      <p class="card-text">{{ Agendamento.barbeiro }}</p>
+      <h5 class="card-title">{{ agendamento.servico }}</h5>
+      <p class="card-text">{{ agendamento.hora }}</p>
+      <p class="card-text">{{ agendamento.barbeiro }}</p>
       <a href="/agendamento/:id" class="btn btn-primary">Ver detalhes</a>
     </div>
     <div class="card-footer text-body-secondary">
-      <v-if></v-if>
-      {{ Agendamento.data }}
+      {{ agendamento.data }}
     </div>
   </div>
 </template>
@@ -34,15 +33,7 @@ import { useRouter } from 'vue-router'
 // TODO [CRITÉRIO 5]:
 // Declare a prop "agendamento" do tipo Agendamento.
 // Ela será passada pelo componente pai (HomeView) para este componente.
-const Agendamento = defineProps<{
-  id: number,
-  clienteNome: string,
-  servico: string,
-  data: string,
-  hora: string,
-  barbeiro: string,
-  status: string
-}>()
+const props = defineProps<{ agendamento: Agendamento }>()
 
 const router = useRouter()
 
