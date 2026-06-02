@@ -17,7 +17,7 @@
       https://vuejs.org/guide/essentials/list.html#v-for
       https://vuejs.org/guide/essentials/list.html#maintaining-state-with-key
     -->
-    <div v-for="agendamento in a">
+    <div v-for="agendamento in agendamentos">
       <AgendamentoCard Agendamento={agendamento} />
     </div>
   </div>
